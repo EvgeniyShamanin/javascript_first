@@ -20,7 +20,7 @@ function findSampleNumber(numb) {
     }
 }
 
-while (i <= 100){
+while (i <= 5){
     if(i === 2 || i === 3 || i === 5 || i === 7){
         array_number.push(i)
     }
