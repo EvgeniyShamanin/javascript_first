@@ -24,8 +24,6 @@ function drawProductInStore(store) {
     vitrina.insertAdjacentHTML('afterbegin', '<h2>Store</h2>')
 
     if (store.length > 0) {
-        vitrina.textContent = '';
-        vitrina.insertAdjacentHTML('afterbegin', '<h2>Store</h2>')
         for (product in store) {
             drowStore(store[product], product)
         }
@@ -33,12 +31,17 @@ function drawProductInStore(store) {
     upBlock.append(vitrina)
 }
 drawProductInStore(store)
+function busketCost(products) {
+    return products.reduce(function (acc, product) {
+        return acc + product.total
+    }, 0)
+}
 function drawProductInBusket(busket) {
     $busket.textContent = '';
     $busket.insertAdjacentHTML('afterbegin', '<h2>Busket</h2>')
     if (busket.length > 0) {
-        $busket.textContent = '';
-        $busket.insertAdjacentHTML('afterbegin', '<h2>Busket</h2>')
+        let summa = busketCost(busket)
+        $busket.insertAdjacentHTML('afterbegin', `<h3>Products in busket ${summa}</h2>`)
         for (product in busket) {
             drawBusket(busket[product], product)
         }
