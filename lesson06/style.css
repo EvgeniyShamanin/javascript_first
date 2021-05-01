@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .product-info {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    align-items:center;
+  }
+  .character {
+    margin-left: 5px;
+  }
+  .button {
+    margin-left: 5px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px; 
+    padding: 5px 50px;
+    display: inline-block;
+  }
